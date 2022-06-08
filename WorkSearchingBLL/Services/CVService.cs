@@ -23,9 +23,12 @@ namespace WorkSearchingBLL.Services
         }
 
         public async Task<int> AddAsync(CVDTO model)
-        {        
+        {
+            var user = await _unitOfWork.UserRepository.GetByIdAsync(model.UserId);
 
             var offer = _mapper.Map<CV>(model);
+
+            offer.FullName = user.FirstName + " " + user.LastName;
 
             await _unitOfWork.CVRepository.AddAsync(offer);
 
@@ -44,7 +47,7 @@ namespace WorkSearchingBLL.Services
             {
                 Education = model.Education,
                 UserId = Guid.Parse(model.UserId),
-                FullName = model.FullName,
+                FullName = user.FirstName + " " + user.LastName,
                 Description = model.Description,
                 Experience = exp,
                 Languages = lang,
@@ -74,6 +77,7 @@ namespace WorkSearchingBLL.Services
             return _mapper.Map<IEnumerable<CVDTO>>(_unitOfWork.CVRepository.FindAll());
         }
 
+
         public Task<CVDTO> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
@@ -81,8 +85,9 @@ namespace WorkSearchingBLL.Services
 
         public async Task<CVDTO> GetCVByUserId(string userId)
         {
+            var user = _unitOfWork.UserRepository.FindAll().FirstOrDefault(x => x.Id == userId);
             var cv = GetAll().FirstOrDefault(x => x.UserId == userId);
-
+            cv.FullName = user.FirstName + " " + user.LastName;
             return cv;
         }
 

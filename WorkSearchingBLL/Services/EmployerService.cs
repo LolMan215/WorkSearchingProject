@@ -46,6 +46,19 @@ namespace WorkSearchingBLL.Services
             await _unitOfWork.SaveAsync();
         }
 
+        public async Task DeleteByIdAsync(string modelId)
+        {
+            try
+            {
+                await _unitOfWork.EmployRepository.DeleteByIdAsync(modelId);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            await _unitOfWork.SaveAsync();
+        }
+
         public IEnumerable<UserDTO> GetAll()
         {
             return _mapper.Map<IEnumerable<UserDTO>>(_unitOfWork.UserRepository.FindAll());
@@ -76,6 +89,11 @@ namespace WorkSearchingBLL.Services
         {
             var user = await _unitOfWork.UserRepository.GetByIdAsync(id);
             return _mapper.Map<UserDTO>(user);
+        }
+
+        public Task<UserDTO> GetUserByForumTitle(string title)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task UpdateAsync(UserDTO model)

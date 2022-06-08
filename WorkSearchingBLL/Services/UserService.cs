@@ -48,6 +48,19 @@ namespace WorkSearchingBLL.Services
             await _unitOfWork.SaveAsync();
         }
 
+        public async Task DeleteByIdAsync(string modelId)
+        {
+            try
+            {
+                await _unitOfWork.UserRepository.DeleteByIdAsync(modelId);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            await _unitOfWork.SaveAsync();
+        }
+
         public IEnumerable<UserDTO> GetAll()
         {
             return _mapper.Map<IEnumerable<UserDTO>>(_unitOfWork.UserRepository.FindAll());
@@ -70,6 +83,8 @@ namespace WorkSearchingBLL.Services
             return _mapper.Map<UserDTO>(user);
         }
 
+
+
         public async Task<UserDTO> GetByIdAsync(string id)
         {
             var user = await _unitOfWork.UserRepository.GetByIdAsync(id);
@@ -81,6 +96,13 @@ namespace WorkSearchingBLL.Services
             _unitOfWork.UserRepository.Update(_mapper.Map<ApplicationUser>(model));
 
             await _unitOfWork.SaveAsync();
+        }
+
+        public async Task<UserDTO> GetUserByForumTitle(string title)
+        {
+            var forum =  _mapper.Map<ForumDTO>(_unitOfWork.ForumRepository.FindAll().FirstOrDefault(x => x.Title == title));
+            var user = await _unitOfWork.UserRepository.GetByIdAsync((forum.UserId.ToString()));
+            return _mapper.Map<UserDTO>(user);
         }
 
         public async Task updateReputation(string id, bool succes)

@@ -14,7 +14,5 @@ namespace WorkSearchingBLL.DTOs
         public string LastName { get; set; }
         public int Reputation { get; set; }
 
-        public List<ForumDTO> Forums { get; set; }
-        public List<CommentDTO> Comments { get; set; }
     }
 }

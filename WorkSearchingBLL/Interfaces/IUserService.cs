@@ -13,5 +13,9 @@ namespace WorkSearchingBLL.Interfaces
         Task<UserDTO> GetByIdAsync(string id);
 
         Task<List<JobOfferDTO>> GetAllOffersAcceptedByUser(string userId);
+
+        Task DeleteByIdAsync(string modelId);
+
+        Task<UserDTO> GetUserByForumTitle(string title);
     }
 }

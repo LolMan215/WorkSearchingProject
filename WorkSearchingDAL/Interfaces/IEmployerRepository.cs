@@ -9,5 +9,7 @@ namespace WorkSearchingDAL.Interfaces
     public interface IEmployerRepository: IRepository<Employer>
     {
         Task<Employer> GetByIdAsync(string id);
+
+        Task DeleteByIdAsync(string id);
     }
 }

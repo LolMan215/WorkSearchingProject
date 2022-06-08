@@ -65,6 +65,14 @@ namespace WorkSearchingBLL.Services
             return _mapper.Map<IEnumerable<ForumDTO>>(_unitOfWork.ForumRepository.FindAll());
         }
 
+        public IEnumerable<ForumDTO> FindByTitle(string title)
+        {
+            var forums = GetAll();
+
+            var findingForums = forums.Where(x => x.Title.Contains(title));
+            return findingForums;
+        }
+
         public async Task<List<ForumDTO>> GetAllTopLevels()
         {
             var data = GetAll().ToList();

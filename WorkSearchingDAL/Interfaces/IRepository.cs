@@ -19,5 +19,7 @@ namespace WorkSearchingDAL.Interfaces
         void Delete(TEntity entity);
 
         Task DeleteByIdAsync(int id);
+
+        
     }
 }

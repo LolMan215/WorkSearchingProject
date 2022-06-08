@@ -40,6 +40,13 @@ namespace WorkSearchingDAL.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task DeleteByIdAsync(string id)
+        {
+            var entity = await GetByIdAsync(id);
+            Delete(entity);
+            await _dbContext.SaveChangesAsync();
+        }
+
         public IQueryable<Employer> FindAll()
         {
             return _employer.Include(x => x.Forums).Include(x => x.JobOffers);

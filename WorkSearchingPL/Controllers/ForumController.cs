@@ -30,6 +30,14 @@ namespace WorkSearchingPL.Controllers
 
         [AllowAnonymous]
         [HttpGet]
+        [Route("{title}")]
+        public async Task<ActionResult> GetForumsByTitle(string title)
+        {
+            return Ok( _forumService.FindByTitle(title).ToList());
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
         [Route("{id:int}")]
         public async Task<ActionResult> GetById(int id)
         {

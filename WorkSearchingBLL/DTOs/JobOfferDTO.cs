@@ -18,8 +18,6 @@ namespace WorkSearchingBLL.DTOs
 
         public DateTime CereatedTime { get; set; }
 
-        public EmployerDTO Employer { get; set; }
 
-        public List<UserDTO> User { get; set; }
     }
 }

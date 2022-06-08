@@ -9,6 +9,5 @@ namespace WorkSearchingBLL.DTOs
     {
         public string CompanyName { get; set; }
 
-        public List<JobOffer> JobOffers { get; set; }
     }
 }

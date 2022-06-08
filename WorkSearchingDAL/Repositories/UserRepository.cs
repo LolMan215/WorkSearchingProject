@@ -40,6 +40,13 @@ namespace WorkSearchingDAL.Repositories
             _dbContext.SaveChanges();
         }
 
+        public async Task DeleteByIdAsync(string id)
+        {
+            var entity = await GetByIdAsync(id);
+            Delete(entity);
+            _dbContext.SaveChanges();
+        }
+
         public IQueryable<ApplicationUser> FindAll()
         {
             return _user.Include(x => x.Forums).Include(y => y.Forums);
@@ -52,9 +59,10 @@ namespace WorkSearchingDAL.Repositories
             return res;
         }
 
-        public Task<ApplicationUser> GetByIdAsync(int id)
+        public async Task<ApplicationUser> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+           
+            return null;
         }
 
         public void Update(ApplicationUser entity)

@@ -26,6 +26,13 @@ namespace WorkSearchingPL.Controllers
             return Ok(await _jobOfferService.GetAllTop());
         }
 
+        [HttpGet]
+        [Route("{position}")]
+        public async Task<ActionResult> GetOfferByPosition(string position)
+        {
+            return Ok(await _jobOfferService.GetOffersByPosition(position));
+        }
+
         [HttpPost]
         [Route("create")]
         public async Task<ActionResult> CreateNew([FromBody] JobOfferDTO data)

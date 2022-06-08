@@ -9,5 +9,6 @@ namespace WorkSearchingDAL.Interfaces
     public interface IUserRepository: IRepository<ApplicationUser>
     {
         Task<ApplicationUser> GetByIdAsync(string id);
+        Task DeleteByIdAsync(string id);
     }
 }

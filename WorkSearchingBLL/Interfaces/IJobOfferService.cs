@@ -13,5 +13,7 @@ namespace WorkSearchingBLL.Interfaces
         Task<List<JobOfferDTO>> GetAllTop();
 
         Task UpdateAsync(int id, JobOfferDTO model);
+
+        Task<List<JobOfferDTO>> GetOffersByPosition(string position);
     }
 }

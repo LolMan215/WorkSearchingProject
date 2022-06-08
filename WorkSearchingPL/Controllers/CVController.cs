@@ -19,6 +19,13 @@ namespace WorkSearchingPL.Controllers
             _cvService = cvService;
         }
 
+        [HttpGet]
+        [Route("")]
+        public async Task<ActionResult> GetAll()
+        {
+            return Ok(_cvService.GetAll());
+        }
+
         /*[HttpPost]
         [Route("create")]
         public async Task<ActionResult> CreateNew([FromBody] CVDTO data, [FromQuery] List<ExperienceUnitDTO> experiences, [FromQuery] List<LanguageUnitDTO> languages, [FromQuery] List<SkillDTO> skills)

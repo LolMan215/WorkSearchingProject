@@ -65,6 +65,12 @@ namespace WorkSearchingBLL.Services
             return data;
         }
 
+        public async Task<List<JobOfferDTO>> GetOffersByPosition(string position)
+        {
+            var data = GetAll();
+            return data.Where(x => x.OfferPosition.Contains(position)).ToList();
+        }
+
         public async Task<JobOfferDTO> GetByIdAsync(int id)
         {
             var offer = await _unitOfWork.JobOfferRepository.GetByIdAsync(id);

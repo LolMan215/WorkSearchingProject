@@ -14,5 +14,7 @@ namespace WorkSearchingBLL.Interfaces
         Task<List<ForumDTO>> GetAllTopLevels();
 
         List<ForumDTO> Get();
+
+        IEnumerable<ForumDTO> FindByTitle(string title);
     }
 }

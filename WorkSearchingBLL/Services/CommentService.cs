@@ -67,9 +67,16 @@ namespace WorkSearchingBLL.Services
             return _mapper.Map<CommentDTO>(res);
         }
 
-        public Task UpdateAsync(int id, CommentDTO model)
+        public async Task UpdateAsync(int id, CommentDTO model)
         {
-            throw new NotImplementedException();
+            var comment = await GetByIdAsync(id);
+
+            if (comment == null)
+                throw new Exception();
+
+            comment.Body = model.Body;
+
+            await UpdateAsync(comment);
         }
 
         public async Task UpdateAsync(CommentDTO model)

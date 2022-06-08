@@ -42,7 +42,7 @@ namespace WorkSearchingDAL.Repositories
 
         public IQueryable<Forum> FindAll()
         {
-            return _forum.Include(x => x.User).Include(z => z.Comments);
+            return _forum;//.Include(x => x.User).Include(z => z.Comments);
         }
 
         public async Task<Forum> GetByIdAsync(int id)

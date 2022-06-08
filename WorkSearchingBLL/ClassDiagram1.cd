@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WorkSearchingBLL.DTOs.CommentDTO">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAIAAAAAAAAAABAAgAAAAAAAQAAAAAAgAAAAA=</HashCode>
+      <FileName>DTOs\CommentDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.CVDTO">
+    <Position X="15.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAACAAgAIAAAAAAAAgAAAAAAAAAAAAgAAAAQAA=</HashCode>
+      <FileName>DTOs\CVDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.EmployerDTO">
+    <Position X="12" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\EmployerDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.ExperienceUnitDTO">
+    <Position X="19.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACCAAAAAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAA=</HashCode>
+      <FileName>DTOs\ExperienceUnitDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.ForumDTO">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAEAAAAABAAgAAAAAAAQAAAAAAAAAIAA=</HashCode>
+      <FileName>DTOs\ForumDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.ImageDTO">
+    <Position X="17.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\ImageDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.JobOfferDTO">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAHAACAgAAAAAAQAASAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\JobOfferDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.LanguageUnitDTO">
+    <Position X="15.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\LanguageUnitDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.SkillDTO">
+    <Position X="17.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\SkillDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkSearchingBLL.DTOs.UserDTO">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAEAAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAgAAIAg=</HashCode>
+      <FileName>DTOs\UserDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

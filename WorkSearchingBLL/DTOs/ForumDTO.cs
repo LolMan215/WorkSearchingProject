@@ -12,7 +12,6 @@ namespace WorkSearchingBLL.DTOs
         public string Body { get; set; }
         public DateTime? Created { get; set; }
 
-        public UserDTO? User { get; set; }
-        public List<CommentDTO>? Comments { get; set; }
+ 
     }
 }
